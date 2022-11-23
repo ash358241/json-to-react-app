@@ -3,7 +3,7 @@ import components from './components/component';
 import strToCapitalizeCase from './utils/strToCapitalizeCase';
 import {styleArr} from './utils/styleGenerate';
 
-console.log(styleArr.join(" ").toString())  
+console.log(styleArr.join(" ").toString()) 
 function App() {
   // addStyle();
   return (

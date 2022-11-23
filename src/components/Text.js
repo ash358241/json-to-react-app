@@ -1,7 +1,6 @@
 import React from 'react';
 import generatedId from '../utils/idGenerator';
 import styleGenerate from '../utils/styleGenerate';
-import parse from "html-react-parser";
 
 const Text = ({data}) => {
     const id = generatedId();
@@ -9,7 +8,7 @@ const Text = ({data}) => {
 
     styleGenerate(id, style);
     
-    return <div className={id}>{parse(content)}</div>;
+    return <div className={id} dangerouslySetInnerHTML={{__html: content}} />;
 };
 
 export default Text;

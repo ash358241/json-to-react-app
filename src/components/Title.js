@@ -1,7 +1,6 @@
 import React from 'react';
 import generatedId from '../utils/idGenerator';
 import styleGenerator from '../utils/styleGenerate';
-import parse from "html-react-parser";
 
 const Title = ({ data }) => {
     const id = generatedId();
@@ -11,7 +10,7 @@ const Title = ({ data }) => {
 
     const CustomTag = data.level;
     
-    return <CustomTag className={id}>{parse(content)}</CustomTag>;
+    return <CustomTag className={id} dangerouslySetInnerHTML={{__html: content}} />
 };
 
 export default Title;
